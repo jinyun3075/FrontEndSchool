@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>card_2</title>
+  <link rel="stylesheet" href="../reset.css">
+  <style>
+
+   
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: cornsilk;
+        border: solid 3px black;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        background-color: darkcyan;
+        border: solid 3px black;
+        border-radius: 10px;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    /* .item-img {
+        flex: 1;
+    } */
+
+    .item-desc {
+        flex: auto;
+        background-color: cornsilk;
+        padding: 10px;
+    }
+
+    @media screen and (max-width:1330px) {
+        .item {
+            width: 500px;
+        }
+    }
+
+    @media screen and (max-width:1100px) {
+        .item {
+            width: 80%;
+        }
+    }
+  </style>
+</head>
+<body>
+    <ul class="container">
+        <li class="item">
+            <img src="../../img/a.jpg" alt="나도 뭔지 몰라요" class="item-img">
+            <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus ducimus reiciendis esse laborum repellat corrupti hic quaerat facilis ipsam itaque, tenetur sit unde harum iste nostrum optio necessitatibus perspiciatis molestias.</p>
+        </li>
+        <li class="item">
+            <img src="../../img/a.jpg" alt="나도 뭔지 몰라요" class="item-img">
+            <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus ducimus reiciendis esse laborum repellat corrupti hic quaerat facilis ipsam itaque, tenetur sit unde harum iste nostrum optio necessitatibus perspiciatis molestias.</p>
+        </li>
+        <li class="item">
+            <img src="../../img/a.jpg" alt="나도 뭔지 몰라요" class="item-img">
+            <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus ducimus reiciendis esse laborum repellat corrupti hic quaerat facilis ipsam itaque, tenetur sit unde harum iste nostrum optio necessitatibus perspiciatis molestias.</p>
+        </li>
+        <li class="item">
+            <img src="../../img/a.jpg" alt="나도 뭔지 몰라요" class="item-img">
+            <p class="item-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus ducimus reiciendis esse laborum repellat corrupti hic quaerat facilis ipsam itaque, tenetur sit unde harum iste nostrum optio necessitatibus perspiciatis molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ipsum porro explicabo optio repellat, atque nisi tenetur quas minima aliquid dolor saepe nihil ducimus repellendus, sint amet quia, molestias asperiores!</p>
+        </li>
+    </ul>
+</body>
+</html>
