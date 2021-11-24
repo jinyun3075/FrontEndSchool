@@ -1,0 +1,28 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: all .3s;
+
+    &:hover {
+        background-color: hotpink;
+    }
+}
+
+.dd {
+    background : {
+        color: pink;
+        position: center center;
+    }
+}
+
+ul{
+    li{
+        &:hover {
+            background-color: green;
+        }
+        &:last-child {
+            border-bottom: 2px solid black;
+        }
+    }
+}

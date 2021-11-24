@@ -1,0 +1,11 @@
+@mixin jinyunjae($x,$y) {
+    font-size : $x * $y +px;
+    @content
+}
+
+div {
+    @include jinyunjae(10,10){
+        color: red;
+        
+    }
+}
