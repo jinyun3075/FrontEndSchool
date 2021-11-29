@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition Test</title>
+</head>
+<style>
+    .box {
+        width: 100px;
+        height: 100px;
+        background: aqua;
+        transition: all 2s;
+        transform-origin: right;
+    }
+
+    .box:hover {
+        transform:rotate(320deg);
+    }
+</style>
+<body>
+    <div class="box"></div>
+</body>
+</html>

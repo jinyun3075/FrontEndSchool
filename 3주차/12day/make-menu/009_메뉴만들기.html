@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu-1</title>
+    <link rel="stylesheet" href="../../../reset.css">
+    <style>
+        .container-color {
+            background-color: cornsilk;
+            border: solid 3px black;
+            border-radius: 10px;
+            height: 75px;
+            padding: 5px;
+            
+        }
+        
+        .item-color {
+            background-color: darkcyan;
+            border: solid 3px black;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 5px;
+        }
+        
+        .container {
+            display: flex;
+        
+        }
+
+        .logo {
+            flex: 5;
+            text-align: center;
+            color: pink;
+
+            font-size: 1.2em;
+            font-weight: 700;
+            line-height: 2.5em;
+            transition: all .5s;
+        }
+       
+        .item {
+            width: 20%;
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 700;
+            line-height: 2.5em;
+            transition: all .5s;
+        }
+
+        .item:hover {
+            flex: 1.5;
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-color container">
+        <div class="item-color logo">LOGO</div>
+        <div class="item-color item">ABOUT ME</div>
+        <div class="item-color item">SKILL</div>
+        <div class="item-color item">PORTFOLIO</div>
+        <div class="item-color item">CONTACT</div>
+    </div>
+    <pre>
+
+    </pre>
+</body>
+</html>
