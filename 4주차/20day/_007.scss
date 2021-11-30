@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @mixin flex($align:null, $way:row) { 
     display:flex;
     flex-direction:$way;
@@ -14,21 +13,4 @@
     } @else if (#{$align} == 'space') {
         justify-content:space-between;
     }
-=======
-@mixin flex($align:null, $way:row) { 
-    display:flex;
-    flex-direction:$way;
-    @content;
-    @if( #{$align} == 'center') {
-        justify-content:center;
-        align-items:center;
-    } @else if ( #{$align} == 'leftCenter') {
-        align-items:center;
-    } @else if (#{$align} == 'spaceCenter') {
-        justify-content:space-between;
-        align-items:center;
-    } @else if (#{$align} == 'space') {
-        justify-content:space-between;
-    }
->>>>>>> 71ea898230905638c61a99ddbe935800e16456d9
 }
