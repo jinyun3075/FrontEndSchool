@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .vending-machine {
     width: 360px;
     height: 545px;
@@ -120,4 +121,128 @@ line-height: 19px;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+=======
+.vending-machine {
+    width: 360px;
+    height: 545px;
+    background: #fff;
+}
+
+.vending-machine ul {
+    display: grid;
+    grid-template-columns: repeat(3, 112px);
+    row-gap: 12px;
+}
+
+.vending-machine>ul li button {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 94px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 0;
+}
+
+.vending-machine>ul li img {
+    width: 36px;
+    height: 65px;
+}
+.vending-machine>ul li .tit-item {
+    font-weight: 500;
+    color: #333;
+    font-size: 9px;
+    line-height: 13px;
+    margin: 7px 0px;
+    
+}
+.vending-machine>ul li .txt-item {    
+    width: 70px;
+    height: 22px;
+    background-color: #6327fe;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    
+}
+
+.vending-machine>ul li .bor {
+    border: 3px solid #6327fe;
+    box-shadow: none;
+}
+
+.vending-machine>ul .end {
+    position: relative;
+    display: flex;
+}
+.vending-machine>ul .end::after {
+    position:absolute;
+    border-radius: 10px;
+    content: '품절';
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 94px;
+    height: 130px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* cont */
+
+.cont-return {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-return .info-balance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eae8fe;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 0 10px;
+    width: 200px;
+    height: 33px;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.cont-return .btn-return {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 94px;
+    height: 33px;
+    font-weight: 500;
+font-size: 13px;
+line-height: 19px;
+
+    box-shadow: 0 0 4px 0.5;
+    border-radius: 5px;
+}
+
+.cont-return .cont-put {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 4px 0.5;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 0 10px;
+    width: 200px;
+    height: 33px;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+>>>>>>> 71ea898230905638c61a99ddbe935800e16456d9
 }

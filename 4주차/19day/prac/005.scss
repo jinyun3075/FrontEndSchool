@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 $font-weights: ("regular": 400,"medium": 500, "bold": 700);
 
 
 div {
     font-weight: map-get($font-weights, "bold");
+=======
+$font-weights: ("regular": 400,"medium": 500, "bold": 700);
+
+
+div {
+    font-weight: map-get($font-weights, "bold");
+>>>>>>> 71ea898230905638c61a99ddbe935800e16456d9
 }

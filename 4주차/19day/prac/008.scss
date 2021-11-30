@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $line-normal : 1.34; // 지역변수
 .info{
     font-size : 15px;
@@ -12,3 +13,19 @@ div {
     color: red;
     line-height: $line-normal;
 }
+=======
+$line-normal : 1.34; // 지역변수
+.info{
+    font-size : 15px;
+    line-height : $line-normal;
+    text-align : right;
+    span{
+        line-height : $line-normal;
+    }
+}
+
+div {
+    color: red;
+    line-height: $line-normal;
+}
+>>>>>>> 71ea898230905638c61a99ddbe935800e16456d9

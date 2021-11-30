@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @mixin jinyunjae($x,$y) {
     font-size : $x * $y +px;
     @content
@@ -8,4 +9,16 @@ div {
         color: red;
         
     }
+=======
+@mixin jinyunjae($x,$y) {
+    font-size : $x * $y +px;
+    @content
+}
+
+div {
+    @include jinyunjae(10,10){
+        color: red;
+        
+    }
+>>>>>>> 71ea898230905638c61a99ddbe935800e16456d9
 }
