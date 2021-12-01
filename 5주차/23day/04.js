@@ -15,7 +15,6 @@ console.log(result2/arr.length);
 
 // 연습문제 2번
 let str = '5, 4, 10, 2, 5';
-str = str.split(', ');
 let result =0;
 for(let i of str) {
     result+=parseInt(i);
@@ -24,12 +23,20 @@ console.log(result/str.length);
 
 // 연습문제 3번
 let result =0;
-let arr = [11, 22, 33, 111, 2]
-let str =[];
+let arr = [11, 22, 33, 111, 2];
+let str ;
 for(let i of arr) {
-    str = (i+'').split('');
+    str = i+'';
     for(let v of str) {
         result += parseInt(v);
     }
+}
+console.log(result);
+//----------3
+let result =0;
+arr = arr+'';
+arr = arr.replaceAll(",","");
+for(let i of arr) {
+    result += parseInt(i);
 }
 console.log(result);
