@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../../reset.css">
+</head>
+<style>
+    .box {
+        margin-top: 50px;
+        margin-left: 50px;
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+    }
+    button {
+        margin-left: 68px;
+    }
+    .red {
+        background-color: red;
+    }
+    .green {
+        background-color: green;
+    }
+    .blue {
+        background-color: blue;
+    }
+</style>
+<body>
+    <div class="box"></div>
+    <button id="btn1">red</button>
+    <button id="btn2">blue</button>
+    <button id="btn3">green</button>
+    <script>
+
+        let box = document.querySelector('.box');
+        let btn1 = document.querySelector('#btn1');
+        let btn2 = document.querySelector('#btn2');
+        let btn3 = document.querySelector('#btn3');
+
+        let btnArr = [btn1, btn2, btn3];
+
+        btnArr.forEach((item) => {
+            // btn1.addEventListener('click', function(){
+            //     box.classList.remove('blue','green');
+            //     box.classList.toggle('red');
+            // })
+            // btn2.addEventListener('click', function(){
+            //     box.classList.remove('red');
+            //     box.classList.remove('green');
+            //     box.classList.toggle('blue');
+            // })
+            item.addEventListener('click', function(){
+                box.classList.remove('blue', 'green', 'red');
+                if(item.id === 'btn1') {
+                box.classList.toggle('red');
+                }else if (item.id === 'btn2'){
+                    box.classList.toggle('blue');
+                } else {
+                    box.classList.toggle('green');
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
