@@ -1,4 +1,4 @@
-# 2021.12.03 dom&lotto
+# 2021.12.03 lotto&DOM
 ## lotto
 ```js
 function randomNum(min,max) {
