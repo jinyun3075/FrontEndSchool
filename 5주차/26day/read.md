@@ -93,8 +93,8 @@ lottoGenerator();
     <script>
         let btn = document.querySelector('button');
         btn.addEventListener('click', function() {
-            btn.classList.toggle("blue");// 클레스를 토글합니다
-            btn.classList.remove('blue');// 클레스를 제거합니다.
+            btn.classList.toggle("blue");// 클래스를 토글합니다
+            btn.classList.remove('blue');// 클래스를 제거합니다.
             btn.classList.contains("blue"); //해당 클래스가 있는지 확인합니다.
         })
     </script>
