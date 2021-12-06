@@ -1,0 +1,80 @@
+    let data = [
+    {
+      "_id": "61ad9ec411f785a5fc5fd0c9",
+      "index": 0,
+      "picture": "http://placehold.it/32x32",
+      "age": 37,
+      "eyeColor": "green",
+      "name": "Rae Miles",
+      "gender": "female",
+      "company": "KOOGLE",
+      "email": "raemiles@koogle.com",
+      "phone": "+1 (960) 514-3590",
+      "address": "372 Lenox Road, Veguita, Utah, 3498"
+    },
+    {
+      "_id": "61ad9ec49375b8192400bb43",
+      "index": 1,
+      "picture": "http://placehold.it/32x32",
+      "age": 39,
+      "eyeColor": "brown",
+      "name": "Robert Hudson",
+      "gender": "female",
+      "company": "MOTOVATE",
+      "email": "roberthudson@motovate.com",
+      "phone": "+1 (834) 581-3108",
+      "address": "767 Nova Court, Darbydale, Northern Mariana Islands, 7248"
+    },
+    {
+      "_id": "61ad9ec4ffd11b7a250d9fb4",
+      "index": 2,
+      "picture": "http://placehold.it/32x32",
+      "age": 37,
+      "eyeColor": "green",
+      "name": "Stewart Blackwell",
+      "gender": "male",
+      "company": "EXPOSA",
+      "email": "stewartblackwell@exposa.com",
+      "phone": "+1 (959) 412-2486",
+      "address": "573 Williams Avenue, Dundee, Alabama, 8288"
+    },
+    {
+      "_id": "61ad9ec44296fecb0051a223",
+      "index": 3,
+      "picture": "http://placehold.it/32x32",
+      "age": 39,
+      "eyeColor": "brown",
+      "name": "Dee Poole",
+      "gender": "female",
+      "company": "KRAGGLE",
+      "email": "deepoole@kraggle.com",
+      "phone": "+1 (832) 445-3045",
+      "address": "917 Kings Hwy, Rossmore, South Carolina, 659"
+    },
+    {
+      "_id": "61ad9ec4a4d7b50672f9d2fe",
+      "index": 4,
+      "picture": "http://placehold.it/32x32",
+      "age": 36,
+      "eyeColor": "brown",
+      "name": "Charlotte Neal",
+      "gender": "female",
+      "company": "EXOTECHNO",
+      "email": "charlotteneal@exotechno.com",
+      "phone": "+1 (980) 579-3124",
+      "address": "464 Monument Walk, Highland, Ohio, 291"
+    },
+    {
+      "_id": "61ad9ec422d8374aadd94b9c",
+      "index": 5,
+      "picture": "http://placehold.it/32x32",
+      "age": 37,
+      "eyeColor": "green",
+      "name": "Grant Bullock",
+      "gender": "male",
+      "company": "VIAGRAND",
+      "email": "grantbullock@viagrand.com",
+      "phone": "+1 (955) 499-3861",
+      "address": "564 Court Street, Holtville, West Virginia, 2070"
+    }
+  ]
