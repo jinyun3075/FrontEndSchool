@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+</head>
+<body>
+    <script>
+        const userdb=[
+            {
+                "_id": "61b05e573b3c983d605a2d77",
+                "id": "Lizzie",
+                "pw": "5915e11a-d5d3-4759-931b-16d9098f7901",
+                "index": 0,
+                "picture": "http://placehold.it/32x32",
+                "age": 31,
+                "eyeColor": "blue",
+                "name": "Marguerite Olsen",
+                "gender": "female",
+                "company": "OLUCORE",
+                "email": "margueriteolsen@olucore.com",
+                "phone": "+1 (952) 570-2677",
+                "address": "599 Covert Street, Brazos, Vermont, 236",
+                "grade": "일반"
+            },
+            {
+                "_id": "61b05e57df5436c339bcb7c6",
+                "id": "Brennan",
+                "pw": "1930e650-ebb4-40d1-8e37-b4f402a2610f",
+                "index": 1,
+                "picture": "http://placehold.it/32x32",
+                "age": 35,
+                "eyeColor": "brown",
+                "name": "Angelica Beck",
+                "gender": "female",
+                "company": "XIIX",
+                "email": "angelicabeck@xiix.com",
+                "phone": "+1 (894) 459-3727",
+                "address": "675 Gardner Avenue, Longoria, South Carolina, 4919",
+                "grade": "일반"
+            },
+            {
+                "_id": "61b05e57833ed4434005f941",
+                "id": "Glass",
+                "pw": "bdcd7637-660b-4f35-8c0c-d9a746bd59ad",
+                "index": 2,
+                "picture": "http://placehold.it/32x32",
+                "age": 29,
+                "eyeColor": "blue",
+                "name": "Watkins Odonnell",
+                "gender": "male",
+                "company": "AQUOAVO",
+                "email": "watkinsodonnell@aquoavo.com",
+                "phone": "+1 (813) 493-3898",
+                "address": "238 Hicks Street, Tyro, Alaska, 6150",
+                "grade": "새싹"
+            },
+            {
+                "_id": "61b05e572fec3c439abe46ce",
+                "id": "Roseann",
+                "pw": "d07ed94c-ad75-4712-929e-f63e42696e36",
+                "index": 3,
+                "picture": "http://placehold.it/32x32",
+                "age": 23,
+                "eyeColor": "brown",
+                "name": "Mercer Turner",
+                "gender": "male",
+                "company": "CHILLIUM",
+                "email": "mercerturner@chillium.com",
+                "phone": "+1 (931) 566-2679",
+                "address": "425 Ocean Court, Celeryville, South Dakota, 7900",
+                "grade": "일반"
+            },
+            {
+                "_id": "61b05e57c1fbe480436c98b3",
+                "id": "Gardner",
+                "pw": "127b4528-f747-4c0a-8706-4adf3c6ee5ab",
+                "index": 4,
+                "picture": "http://placehold.it/32x32",
+                "age": 36,
+                "eyeColor": "brown",
+                "name": "Marina Keller",
+                "gender": "female",
+                "company": "EZENTIA",
+                "email": "marinakeller@ezentia.com",
+                "phone": "+1 (814) 540-3130",
+                "address": "662 Just Court, Bowie, Oregon, 9216",
+                "grade": "관리자"
+            },
+            {
+                "_id": "61b05e57a403b5867ef532ee",
+                "id": "Caldwell",
+                "pw": "178a4685-4d5b-4bd6-bb60-dd168b801f70",
+                "index": 5,
+                "picture": "http://placehold.it/32x32",
+                "age": 31,
+                "eyeColor": "green",
+                "name": "Thomas Wilson",
+                "gender": "male",
+                "company": "MANUFACT",
+                "email": "thomaswilson@manufact.com",
+                "phone": "+1 (896) 465-3449",
+                "address": "926 Canal Avenue, Byrnedale, Arkansas, 9558",
+                "grade": "다이아몬드"
+            },
+            {
+                "_id": "61b05e575158a41472c866d2",
+                "id": "Antoinette",
+                "pw": "5d55a543-0c13-4e43-bc60-1070d39563a3",
+                "index": 6,
+                "picture": "http://placehold.it/32x32",
+                "age": 27,
+                "eyeColor": "green",
+                "name": "Kellie Gray",
+                "gender": "female",
+                "company": "MALATHION",
+                "email": "kelliegray@malathion.com",
+                "phone": "+1 (983) 485-2980",
+                "address": "104 Garnet Street, Dixonville, Missouri, 8533",
+                "grade": "실버"
+            },
+            {
+                "_id": "61b05e57b9cadc980033d8d3",
+                "id": "jin",
+                "pw": "1234",
+                "index": 7,
+                "picture": "http://placehold.it/32x32",
+                "age": 35,
+                "eyeColor": "blue",
+                "name": "Lewis Spears",
+                "gender": "male",
+                "company": "ANIXANG",
+                "email": "lewisspears@anixang.com",
+                "phone": "+1 (952) 496-2575",
+                "address": "308 Poplar Avenue, Sardis, New York, 3058",
+                "grade": "다이아몬드"
+            }
+        ]
+        class GetUserData {
+            login(아이디, 비밀번호, 성공, 실패) {
+                const data = userdb.find(user=>user.id === 아이디 && user.pw === 비밀번호);
+                if (data) {
+                    성공(아이디);
+                } else {
+                    실패(new Error('로그인 실패!'))
+                }
+            }
+            getUserDataSet(이용자, 성공, 실패) {
+                const data = userdb.find(user => user.id === 이용자);
+                if (data) {
+                    성공({
+                        id : data.id,
+                        picture : data.picture,
+                        name : data.name,
+                        company : data.company,
+                        email : data.email,
+                        grade : data.grade
+                    });
+                } else {
+                    실패(new Error('데이터 베이스 로드 실패!'));
+                }
+            }
+        }
+        const userData = new GetUserData();
+        const id ='jin';
+        const pw ='1234';
+        userData.login(id,pw,
+        (userId)=>{
+            userData.getUserDataSet(
+                userId,
+                (userBasicInfo)=>{
+                    console.log(userBasicInfo);
+                },
+                (실패)=>{
+                    console.log(실패);
+                }
+            )
+        },
+    
+        (실패)=>{
+            console.log(실패);
+        }
+        );
+    </script>
+</body>
+</html>
