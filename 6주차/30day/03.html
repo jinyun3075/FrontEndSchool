@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+</head>
+<body>
+    <p id="p3">hello world</p>
+    <div class="wrapper">
+        <h1 class="title">TITLE</h1>
+        <ul>
+            <li class="items">item 1</li>
+            <li class="items">item 2</li>
+            <li class="items">item 3</li>
+        </ul>
+    </div>
+    <ul class="ul2">
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+    <div id="div1">hello world</div>
+    <div class="one blue">hello world</div>
+    <div class="two blue">hello world</div>
+    <p class="blue">hello world</p>
+    
+    <script>
+        $('.items').parent().css('backgroundColor','blue');
+        $('.items').eq(1).css('color', 'red');
+        $('.ul2').childeren('li:lt(3)').css('color', 'green');
+        $('.ul2').childeren('li:gt(6)').css('color', 'red');
+
+        $('ul').append('<li>hello world end</li>');
+        $('ul').prepend('<li>hello world start</li>')
+        $('ul').after('<h2>시작!</h2>');
+        $('ul').before('<h2>끝</h2>');
+    </script>
+</body>
+</html>
