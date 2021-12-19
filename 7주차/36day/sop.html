@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>hello! SOP!!!</h1>
+
+    <iframe width="1424" height="652" src="https://www.youtube.com/embed/5tQeSeyUQL0" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen class="youtube"></iframe>
+
+    <iframe src="sameOrigin.html" frameborder="0" class="sameOrigin"></iframe>
+
+
+    <script>
+        const pageOther = document.querySelector(".youtube");
+        const pageSame = docyment.querySelector(".sameOrigin");
+
+        pageOther.onload = function() {
+            console.log("pageOther :", pageOther.contentDocument);
+        }
+        pageOther.onload = function() {
+            console.log("pageOther :", pageSame.contentDocument);
+            pageSame.contentDocument.body.style.backgroundColor = "red";
+        }
+
+        console.log("pageOther :",pageOther);
+        console.log("pageSame :",pageSame);
+    </script>
+</body>
+
+</html>
