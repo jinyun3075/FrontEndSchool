@@ -10,12 +10,40 @@
 // 방법1로 하였을 때 postman에서 잘 들어가지만, 일반 브라우저에서는 잘 안돌아갑니다.
 // 이유는 front-end에서 처리를 안해줘서 그런데요. 다음 장에서 좀 더 상세히 살펴보겠습니다.
 
+////////////////////////////
+// 정리 : JWT는 json 형태의 웹 토큰 발행(그동안 주고 받았던 쿠키와 세션을 대체)
+// Header, Payload, Signature 부분으로 나뉘는데, 시그니처는 서버의 시크릿 키라서 시그니처 부분은 해커가 해독 불가
+// 보통 headers에 authorization : Bearer 'JWT값' 형태로 전송하여 주고받음(로그인 유지)
+
+////////////////////////////
+// 2_4 실습1
+// post - http://localhost:8080/join
+// {
+//     "id" : "hojun",
+//     "password" : "1234",
+//     "blog" : "sdf"
+// }
+// 아래 토큰은 메모장에 저장해두세요.
+// {
+//     "msg": "회원이 되신 것을 축하드립니다!",
+//     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImhvanVuIiwiYmxvZyI6InNkZiIsImlhdCI6MTY0MTQ1MjE1NiwiZXhwIjoxNjQxNDUyNDU2fQ.YZqSko6BLGy2kzZrbvDAtJAYnv03BBgWbmqctKCbWCY"
+// }
+
+// 2_4 실습2
+// get - http://localhost:8080/?id=hojun&pw=1234
+// 로그인 확인
+
+// 2_5 실습3
+// get - http://localhost:8080/check
+// Headers의 key : Authorization
+// Headers의 value : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImhvanVuIiwiYmxvZyI6InNkZiIsImlhdCI6MTY0MTQ1MjE1NiwiZXhwIjoxNjQxNDUyNDU2fQ.YZqSko6BLGy2kzZrbvDAtJAYnv03BBgWbmqctKCbWCY
+
+
 const express = require('express');
 const session = require('express-session'); // 이렇게 생성하면! req.session이 생성이 됩니다!
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt') // 외장 모듈
 var cookieParser = require('cookie-parser');
-
 
 // 앞서 말씀드린 것처럼 당연히 실제 이렇게 저장되진 않았습니다. 
 // 이해하기 편하시도록 작성한 예제입니다.
@@ -46,7 +74,8 @@ app.post('/join', async (req, res, next) => {
     const user = database.find(u => u.id == id);
     // if 동일한 아이디가 없을 때, else 있을 때
     if(!user) {
-        const hashed = await bcrypt.hash(password, 10);
+        // bcrypt.hash(password, salt , (err, hash) => { ... }
+        const hashed = bcrypt.hashSync(password, 10);
         //클라이언트 측으로 부터 받은 회원 정보 저장
         const newUser = {
             id, 
@@ -55,9 +84,10 @@ app.post('/join', async (req, res, next) => {
         };
 
         database.push(newUser);
+        console.log(database);
         
         //JWT 토큰 생성(id와 blog 주소를 담아서)
-        const newUserToken = jwt.sign({id, blog}, jwtsecret,{
+        const newUserToken = jwt.sign({id, blog}, jwtsecret, {
             expiresIn : 60 * 5     // 60초 유효 토큰 test할 때에는 뒤에 값을 늘려주세요.
         });
 
@@ -121,6 +151,7 @@ app.use('/check', (req, res, next) => {
         console.log(req.get('Authorization'));
 
         const token = req.headers.authorization.split(' ')[1];
+        console.log(token)
 
         jwt.verify(token, jwtsecret, (err, encode)=>{
             if(err) {
@@ -131,12 +162,12 @@ app.use('/check', (req, res, next) => {
                 return res.send(`hello world!! ${encode.id}`);
             }
         });
+
+        return;
     }
 
     return res.send('로그인 안하셨는데요?!');
     
-
-    // 
     // const userToken = auth.split(' ')[1];
 
     // 방법2

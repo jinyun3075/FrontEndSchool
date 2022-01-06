@@ -1,0 +1,26 @@
+{
+  "name": "021_db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app1.js",
+  "scripts": {
+    "start": "nodemon app5_실습.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "helmet": "^5.0.1",
+    "mongoose": "^6.1.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.4",
+    "nunjucks": "^3.2.3",
+    "nunjucks-date-filter": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
