@@ -16,7 +16,7 @@ app.use(express.json());
 // mongodb://[id:pw]localhost:27017/[project]의 형태입니다. 우리는 아이디 패스워드를 만들어준 적이 없으므로 적지 않아도 됩니다. project는 뒤에서 언급합니다.
 // 다른 파일로 만들어서 이 부분을 모듈로 export해야합니다. 흐름만 봐주세요.
 // mongoose.connect('mongodb://localhost:27017/test125');
-mongoose.connect('mongodb+srv://jin:jin@first-project.0dfpr.mongodb.net/test1?retryWrites=true&w=majority');
+mongoose.connect('');
 
 // 2. 연결 DB 사용
 const db = mongoose.connection;
